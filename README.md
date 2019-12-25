@@ -3,7 +3,7 @@ Super simple application for filtering robocalls with an audio based captcha.
 
 [![Build][travis-image]][travis-url]
 
-A random 4-digit code is played to the caller, which then must be entered in on their keypad for the call to connect. After the caller has successfully entered the code, they are whitelisted, and are not required to enter a code on subsequent calls.
+A random 4-digit code is played to the caller, which then must be entered in on their keypad for the call to connect. After the caller has successfully entered the code, they are blacklisted, and are not required to enter a code on subsequent calls.
 
 This app uses the Twilio programmable voice API.
 
@@ -28,7 +28,7 @@ From the Twilio console, configure the hook for incoming calls to point to the /
 
 ### (Optional) Google Cloud Datastore
 
-By default, the caller whitelist is stored in memory. If you would like whitelist to persist, you will need a Google Cloud Platform account.
+By default, the caller blacklist is stored in memory. If you would like whitelist to persist, you will need a Google Cloud Platform account.
 
 
 ### Environment variables
